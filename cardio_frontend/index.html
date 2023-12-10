@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Doenças Cardiovasculares - Classificação e Predição</title>
+    <link rel="icon" href="img/cardio_icon.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Cabeçalho de informações do sistema -->
+        <header>
+            <h1>Diagnóstico de Doenças Cardiovasculares - Utilização de técnicas de Machine Learning</h1>
+        </header>
+
+        <div class="input-dados">
+            <h3>Forneça seus dados para predição de doença cardiovascular</h3>
+            <hr>
+            <form name="dados-voluntario">
+                <label for="input-nome">Nome:</label><br>
+                <input type="text" id="input-nome" name="input-nome" placeholder="Pedro de Oliveira"><br><br>
+                <label for="input-idade">Idade:</label><br>
+                <input type="number" id="input-idade" name="input-idade" placeholder="25"><br><br>
+                <label for="input-sexo">Sexo (1:Feminino; 2:Masculino):</label><br>
+                <input type="number" id="input-sexo" name="input-sexo" min="1", max="2" placeholder="1"><br><br>   
+                <label for="input-altura">Altura (em cm):</label><br>
+                <input type="number" id="input-altura" name="input-altura" placeholder="172"><br><br>
+                <label for="input-peso">Peso (em Kg):</label><br>
+                <input type="number" id="input-peso" name="input-peso" placeholder="80.5"><br><br>
+                <label for="input-sistolica">Pressão sanguínea sistólica:</label><br>
+                <input type="number" id="input-sistolica" name="input-sistolica" placeholder="120"><br><br>
+                <label for="input-diastolica">Pressão sanguínea diastólica:</label><br>
+                <input type="number" id="input-diastolica" name="input-diastolica" placeholder="80"><br><br>
+                <label for="input-colesterol">Colesterol (0:Normal; 1:Acima do normal; 2:Muito acima do normal):</label><br>
+                <input type="number" id="input-colesterol" name="input-colesterol" min="0" max="2" placeholder="0"><br><br>
+                <label for="input-glicemia">Glicemia (0:Normal; 1:Acima do normal; 2:Muito acima do normal):</label><br>
+                <input type="number" id="input-glicemia" name="input-glicemia" min="1" max="2" placeholder="0"><br><br>
+                <label for="input-fumante">Fuma? (0:Não; 1:Sim)</label><br>
+                <input type="number" id="input-fumante" name="input-fumante" min="0" max="1" placeholder="0"><br><br>
+                <label for="input-alcoolico">Bebe? (0:Não; 1:Sim)</label><br>
+                <input type="number" id="input-alcoolico" name="input-alcoolico" min="0" max="1" placeholder="0"><br><br>
+                <label for="input-atividade">Atividade física? (0:Não; 1:Sim)</label><br>
+                <input type="number" id="input-atividade" name="input-atividade" min="0" max="1" placeholder="1"><br><br>
+                <span onclick="newPerson()" class="insert-btn">Diagnosticar</span>
+                <span onclick="closeApp()" class="close-btn">Sair</span>    
+            </form>
+        </div> 
+             
+        <div class="show-dados">
+            <table id="cardiodata-table">
+                <tr class="tr-caput">
+                    <th id="th-nome">Nome</th>
+                    <th id="th-idade">Idade</th>
+                    <th id="th-sexo">Sexo</th>
+                    <th id="th-altura">Altura</th>
+                    <th id="th-peso">Peso</th>
+                    <th id="th-sistolica">Pressão Sistólica</th>
+                    <th id="th-diastolica">Pressão Diastólica</th>
+                    <th id="th-colesterol">Colesterol</th>
+                    <th id="th-glicemia">Glicemia</th>
+                    <th id="th-fumante">Fuma</th>
+                    <th id="th-alcoolico">Bebe</th>
+                    <th id="th-atividade">Atividade Física</th>
+                    <th id="th-diagnostico">Diagnóstico</th>
+                    <th id="th-del"><img src="img/lixeira_icon.png" width="15px" height="15px">
+                </tr>
+            </table>
+        </div>
+
+        <script src="scripts.js"></script>
+        
+        <footer>
+            <h4>Trabalho MVP4 - Especialização em Engenharia de SoftwareW PUC Rio 2023</h5>
+            <h5><a href="#">Aluno: Nelson Gomes da Silveira</a></h6>
+        </footer>
+    </div> <!--container-->
+    
+</body>
+</html>
